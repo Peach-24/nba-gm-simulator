@@ -4,13 +4,13 @@ const Header = () => {
   return (
     <header id="welcome">
       <h1>Welcome to GM Game</h1>
-      <img
+      {/* <img
         id="ball"
         src="https://www.how-to-draw-funny-cartoons.com/image-files/cartoon-basketball-3.gif"
         height="100"
         width="100"
         alt="bouncing basketball"
-      ></img>
+      ></img> */}
       <p id="ball-emoji">🏀</p>
       <form>
         <label>Enter your name: </label>
@@ -23,7 +23,7 @@ const Header = () => {
         <button> 🏀 </button>
         <br></br>
 
-        <label>Enter your team name</label>
+        <label>Enter team name: </label>
         <input
           type="text"
           size="25"

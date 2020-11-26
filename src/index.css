@@ -13,8 +13,8 @@ main {
 
 #ball-emoji {
   font-size: 100px;
+  margin-left: 50%;
   width: max-content;
-  text-align: right;
 }
 
 #ball-emoji:hover {
