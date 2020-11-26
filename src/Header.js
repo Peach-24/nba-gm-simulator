@@ -12,11 +12,11 @@ const Header = () => {
       ></img>
       <form>
         <label>Enter your name: </label>
-        <input type="text" placeholder="GM ..." size="25"></input>
-        <button>+</button>
+        <input type="text" size="25"></input>
+        <button> + </button>
       </form>
       <br></br>
-      <h2>How to play:</h2>
+      <h2>How to play</h2>
       <p>
         You are now in charge of the TEAM NAME. You have AMOUNT to spend on
         building out a roster for the upcoming season.
