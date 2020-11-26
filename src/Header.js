@@ -48,7 +48,9 @@ const Header = () => {
       <div id="rules">
         <ul>
           <li class="rules-list">You must have at least 8 players</li>
-          <li class="rules-list">You cannot go over your budget of AMOUNT</li>
+          <li class="rules-list">
+            You cannot go over your budget of $150,000,000
+          </li>
           <li class="rules-list">
             Your team must contain Guards, Forwards and Centres
           </li>
