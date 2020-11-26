@@ -6,6 +6,14 @@ import AvailablePlayers from './AvailablePlayers';
 import Budget from './Budget';
 import Scouting from './Scouting';
 import players from './playerData';
+import Lebron from './sounds/lebron-james.mp3';
+import Sword from './sounds/sword.mp3';
+import { Howl, Howler } from 'howler';
+
+const audioClips = [
+  { sound: Lebron, label: 'CLICK ME' },
+  { sound: Sword, label: 'Sword' }
+];
 
 class App extends React.Component {
   state = {
@@ -14,9 +22,29 @@ class App extends React.Component {
     selectedPlayer: null
   };
 
+  SoundPlay = (src) => {
+    const sound = new Howl({
+      src
+    });
+    sound.play();
+  };
+
+  RenderButtonAndSound = () => {
+    return audioClips.map((soundObj, index) => {
+      return (
+        <button key={index} onClick={() => this.SoundPlay(soundObj.sound)}>
+          {soundObj.label}
+        </button>
+      );
+    });
+  };
+
   render() {
+    Howler.volume(1.0);
     return (
       <main>
+        <div>{this.RenderButtonAndSound()}</div>
+
         <Header />
         <Budget />
         <Scouting />
