@@ -13,14 +13,34 @@ const Header = () => {
       ></img>
       <form>
         <label>Enter your name: </label>
-        <input type="text" size="25"></input>
+        <input
+          type="text"
+          size="25"
+          placeholder="GM Joe Bloggs"
+          required
+        ></input>
+        <button> + </button>
+        <br></br>
+
+        <label>Enter your team name</label>
+        <input
+          type="text"
+          size="25"
+          placeholder="The Monstars"
+          required
+        ></input>
         <button> + </button>
       </form>
       <br></br>
-      <h2>How to play</h2>
+
       <p>
-        You are now in charge of the TEAM NAME. You have AMOUNT to spend on
-        building out a roster for the upcoming season.
+        GM Joe Bloggs, you are now in charge of the The Monstars. You have
+        $150,000,000 to spend on building out a roster for the upcoming season.
+        <br />
+        Good luck, we have faith in you.
+        <br />
+        Yours sincerely, <br />
+        Team Owner
       </p>
       <br></br>
       <h2>Rules</h2>
