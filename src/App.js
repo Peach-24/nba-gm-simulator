@@ -52,6 +52,12 @@ class App extends React.Component {
 
   addToRoster = (player) => {
     console.log('IN addToRoster >>>>>>>>>>', player);
+    this.setState((currState) => {
+      const newState = {
+        currentRoster: [player, ...currState.currentRoster],
+      };
+      return newState;
+    });
   };
 
   // addToRoster = () => {
