@@ -1,0 +1,93 @@
+/* STANDARD FORMATTING FOR ALL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 0 2rem;
+  background-color: rgba(0, 0, 0, 0.452);
+  z-index: 0;
+}
+#rules {
+  margin: auto;
+  width: 40%;
+}
+#rules li {
+  text-align: left;
+}
+header {
+  text-align: center;
+  background-color: blanchedalmond;
+  width: 60%;
+  margin: auto;
+}
+
+button {
+  padding: 1vw;
+  font-size: 1vw;
+}
+
+/* BALL ANIMATION */
+#ball:hover {
+  transition: 0.2s;
+  transform: translate(0px, -8px);
+}
+
+.rosters-container {
+  display: flex;
+  margin: 1rem;
+}
+
+.rosters {
+  width: 60%;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.461);
+}
+
+li {
+  list-style: none;
+}
+
+.rules-list {
+  list-style: circle;
+}
+/***********   PLAYER CARDS   **********/
+
+#player-card {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgb(252, 246, 226);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.42);
+  text-align: center;
+}
+.player-info h1 {
+  font-size: 3vw;
+  margin-bottom: 1rem;
+}
+.player-block {
+  display: flex;
+}
+.headshot {
+  width: 20%;
+  padding: 1rem 0;
+}
+.headshot img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 2px 2px 5px black;
+}
+.player-info {
+  padding: 0.5rem;
+  width: 60%;
+  text-align: left;
+  font-size: 1.5vw;
+}
+.rating {
+  font-size: 5vw;
+  width: 20%;
+  color: rgb(99, 0, 0);
+}

@@ -1,19 +1,35 @@
 import React from 'react';
-import players from './playerData';
 
 const AvailablePlayers = (props) => {
   return (
-    <div id="availablePlayers" class="rosters">
+    <div id='availablePlayers' class='rosters'>
       <h3>Available Players:</h3>
       <ul>
         {props.players.map((player) => {
+          const remove = props.selectPlayer;
+
           return (
-            <li key={player.name} id="player-card">
-              <img src={player.url} alt={player.name}></img>
-              <p>Name: {player.name}</p>
-              <p>Rating: {player.rating}</p>
-              <p>Position: {player.position}</p>
-              <p>Salary: ${player.salary}</p>
+            <li key={player.name} id='player-card'>
+              <div class='player-block'>
+                <div class='headshot'>
+                  <img src={player.url} alt={player.name} />
+                </div>
+                <div class='player-info'>
+                  <h1>{player.name}</h1>
+                  <p>Position: {player.position}</p>
+                  <p>Salary: ${player.salary}</p>
+                </div>
+                <div class='rating'>
+                  <p>{player.rating}</p>
+                  <button
+                    onClick={() => {
+                      remove(player.name);
+                    }}
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
             </li>
           );
         })}
@@ -23,3 +39,4 @@ const AvailablePlayers = (props) => {
 };
 
 export default AvailablePlayers;
+// () => props.selectPlayer(player)
