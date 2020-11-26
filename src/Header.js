@@ -20,7 +20,7 @@ const Header = () => {
           placeholder="GM Joe Bloggs"
           required
         ></input>
-        <button> 🏀 </button>
+        <button> + </button>
         <br></br>
 
         <label>Enter team name: </label>

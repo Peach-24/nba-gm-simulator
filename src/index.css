@@ -37,6 +37,10 @@ header {
 }
 
 button {
+  padding: 0.25vw;
+}
+
+#select-player {
   padding: 1vw;
   font-size: 1vw;
 }
