@@ -13,6 +13,8 @@ main {
 
 #ball-emoji {
   font-size: 100px;
+  width: max-content;
+  text-align: right;
 }
 
 #ball-emoji:hover {
@@ -37,12 +39,6 @@ header {
 button {
   padding: 1vw;
   font-size: 1vw;
-}
-
-/* BALL ANIMATION */
-#ball:hover {
-  transition: 0.2s;
-  transform: translate(0px, -8px);
 }
 
 .rosters-container {
