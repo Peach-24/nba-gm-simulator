@@ -10,6 +10,10 @@ main {
   background-color: rgba(0, 0, 0, 0.452);
   z-index: 0;
 }
+span {
+  width: 100%;
+  height: 100%;
+}
 
 #ball-emoji {
   font-size: 100px;

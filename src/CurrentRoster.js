@@ -2,23 +2,23 @@ import React from 'react';
 
 const CurrentRoster = (props) => {
   return (
-    <header id="currentRoster" class="rosters">
+    <header id='currentRoster' class='rosters'>
       <h3>Current Roster:</h3>
-      <p>Number of players: 0</p>
+      <p>Number of players: {props.players.length}</p>
       <ul>
         {props.players.map((player) => {
           return (
-            <li key={player.name} id="player-card">
-              <div class="player-block">
-                <div class="headshot">
+            <li key={player.name} id='player-card'>
+              <div class='player-block'>
+                <div class='headshot'>
                   <img src={player.url} alt={player.name} />
                 </div>
-                <div class="player-info">
+                <div class='player-info'>
                   <h1>{player.name}</h1>
                   <p>Position: {player.position}</p>
                   <p>Salary: ${player.salary}</p>
                 </div>
-                <div class="rating">
+                <div class='rating'>
                   <p>{player.rating}</p>
                   <button>Remove</button>
                 </div>

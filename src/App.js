@@ -11,7 +11,7 @@ class App extends React.Component {
   state = {
     availablePlayers: players,
     currentRoster: [],
-    selectedPlayer: null
+    selectedPlayer: null,
   };
 
   render() {
@@ -20,7 +20,7 @@ class App extends React.Component {
         <Header />
         <Budget />
         <Scouting />
-        <div class="rosters-container">
+        <div class='rosters-container'>
           <CurrentRoster
             players={this.state.currentRoster}
             // addToRoster={this.addToRoster}
@@ -29,7 +29,7 @@ class App extends React.Component {
           <AvailablePlayers
             players={this.state.availablePlayers}
             selectPlayer={this.selectPlayer}
-            // addToRoster={this.addToRoster}
+            addToRoster={this.addToRoster}
           />
         </div>
       </main>
@@ -42,7 +42,7 @@ class App extends React.Component {
         availablePlayers: currState.availablePlayers.filter(
           (player) => player.name !== playerName
         ),
-        selectedPlayer: (currState.selectedPlayer = playerName)
+        selectedPlayer: (currState.selectedPlayer = playerName),
       };
 
       console.log('NEWSTATE >>>>>', newState);
@@ -50,7 +50,18 @@ class App extends React.Component {
     });
   };
 
-  // addToRoster = (player) => {
+  addToRoster = (player) => {
+    console.log('IN addToRoster >>>>>>>>>>', player);
+    this.setState((currState) => {
+      const newState = {
+        currentRoster: [player, ...currState.currentRoster],
+      };
+      return newState;
+    });
+  };
+
+  // addToRoster = () => {
+  //   console.log('IN addToRoster >>>>>>>>>>');
   //   this.setState((currState) => {
   //     console.log(currState.currentRoster);
   //     let x = this.selectedPlayer;
