@@ -3,15 +3,22 @@ import React from 'react';
 const Header = () => {
   return (
     <header id="welcome">
-      <h1>Welcome to GM Game</h1>
-      {/* <img
-        id="ball"
-        src="https://www.how-to-draw-funny-cartoons.com/image-files/cartoon-basketball-3.gif"
-        height="100"
-        width="100"
-        alt="bouncing basketball"
-      ></img> */}
+      <h1>NBA GM Simulator</h1>
       <p id="ball-emoji">🏀</p>
+      {/* <img
+        src="https://lh3.googleusercontent.com/proxy/TJLEr9yEe53LMecNfUobT4zuZfD0N4cyBvzmzxcSIwGsoMTua8q-YdaDnufvE__2VDL_HZ8gmm6TGJOHTnjJKp91RDoCWSc6LrkApRb0_6nUAc7x"
+        alt="cat playing basketball"
+        height="250"
+        width="250"
+      /> */}
+      <iframe
+        title="lebron"
+        width="110"
+        height="200"
+        src="https://www.myinstants.com/instant/lebron-james-kid/embed/"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
       <form>
         <label>Enter your name: </label>
         <input
