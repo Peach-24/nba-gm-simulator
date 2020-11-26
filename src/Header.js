@@ -2,18 +2,18 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header id='welcome'>
+    <header id="welcome">
       <h1>Welcome to GM Game</h1>
       <img
-        id='ball'
-        src='https://www.how-to-draw-funny-cartoons.com/image-files/cartoon-basketball-3.gif'
-        height='100'
-        width='100'
-        alt='bouncing basketball'
+        id="ball"
+        src="https://www.how-to-draw-funny-cartoons.com/image-files/cartoon-basketball-3.gif"
+        height="100"
+        width="100"
+        alt="bouncing basketball"
       ></img>
       <form>
         <label>Enter your name: </label>
-        <input type='text' size='25'></input>
+        <input type="text" size="25"></input>
         <button> + </button>
       </form>
       <br></br>
@@ -24,11 +24,11 @@ const Header = () => {
       </p>
       <br></br>
       <h2>Rules</h2>
-      <div id='rules'>
+      <div id="rules">
         <ul>
-          <li class='rules-list'>You must have at least 8 players</li>
-          <li class='rules-list'>You cannot go over your budget of AMOUNT</li>
-          <li class='rules-list'>
+          <li class="rules-list">You must have at least 8 players</li>
+          <li class="rules-list">You cannot go over your budget of AMOUNT</li>
+          <li class="rules-list">
             Your team must contain Guards, Forwards and Centres
           </li>
         </ul>

@@ -4,14 +4,14 @@ import Header from './Header';
 import CurrentRoster from './CurrentRoster';
 import AvailablePlayers from './AvailablePlayers';
 import Budget from './Budget';
-// import Scouting from './Scouting';
+import Scouting from './Scouting';
 import players from './playerData';
 
 class App extends React.Component {
   state = {
     availablePlayers: players,
     currentRoster: [],
-    selectedPlayer: null,
+    selectedPlayer: null
   };
 
   render() {
@@ -19,8 +19,8 @@ class App extends React.Component {
       <main>
         <Header />
         <Budget />
-
-        <div class='rosters-container'>
+        <Scouting />
+        <div class="rosters-container">
           <CurrentRoster
             players={this.state.currentRoster}
             // addToRoster={this.addToRoster}
@@ -42,7 +42,7 @@ class App extends React.Component {
         availablePlayers: currState.availablePlayers.filter(
           (player) => player.name !== playerName
         ),
-        selectedPlayer: (currState.selectedPlayer = playerName),
+        selectedPlayer: (currState.selectedPlayer = playerName)
       };
 
       console.log('NEWSTATE >>>>>', newState);
