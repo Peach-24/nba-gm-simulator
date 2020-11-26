@@ -6,7 +6,7 @@ const players = [
     rating: 9.5,
     salary: 34000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/jamesle01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/jamesle01.jpg'
   },
   {
     name: 'Giannis Antetokounmpo',
@@ -15,7 +15,7 @@ const players = [
     rating: 9.3,
     salary: 32000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/antetgi01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/antetgi01.jpg'
   },
   {
     name: 'James Harden',
@@ -24,7 +24,7 @@ const players = [
     rating: 9.2,
     salary: 34000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/hardeja01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/hardeja01.jpg'
   },
   {
     name: 'Stephen Curry',
@@ -33,7 +33,7 @@ const players = [
     rating: 9.4,
     salary: 33000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/curryst01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/curryst01.jpg'
   },
   {
     name: 'Jimmy Butler',
@@ -42,7 +42,7 @@ const players = [
     rating: 8,
     salary: 28000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/butleji01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/butleji01.jpg'
   },
   {
     name: 'Jayson Tatum',
@@ -51,7 +51,7 @@ const players = [
     rating: 8.2,
     salary: 28000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/tatumja01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/tatumja01.jpg'
   },
   {
     name: 'Chris Paul',
@@ -60,7 +60,7 @@ const players = [
     rating: 8.9,
     salary: 28000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/paulch01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/paulch01.jpg'
   },
   {
     name: 'Blake Griffin',
@@ -69,7 +69,7 @@ const players = [
     rating: 8.0,
     salary: 26000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/griffbl01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/griffbl01.jpg'
   },
   {
     name: 'Ben Simmons',
@@ -78,7 +78,7 @@ const players = [
     rating: 8.2,
     salary: 28000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/simmobe01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/simmobe01.jpg'
   },
   {
     name: 'Joel Embiid',
@@ -87,7 +87,7 @@ const players = [
     rating: 7.8,
     salary: 25000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/embiijo01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/embiijo01.jpg'
   },
   {
     name: 'Dwight Howard',
@@ -96,7 +96,7 @@ const players = [
     rating: 6.8,
     salary: 2500000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/howardw01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/howardw01.jpg'
   },
   {
     name: 'Rajon Rondo',
@@ -105,7 +105,7 @@ const players = [
     rating: 6.5,
     salary: 8000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/rondora01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/rondora01.jpg'
   },
   {
     name: 'Dennis Schröder',
@@ -114,7 +114,7 @@ const players = [
     rating: 6.9,
     salary: 12000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/schrode01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/schrode01.jpg'
   },
   {
     name: 'Hassan Whiteside',
@@ -123,7 +123,7 @@ const players = [
     rating: 5.0,
     salary: 7000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/whiteha01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/whiteha01.jpg'
   },
   {
     name: 'CJ McCollum',
@@ -132,7 +132,7 @@ const players = [
     rating: 8.2,
     salary: 21000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/mccolcj01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/mccolcj01.jpg'
   },
   {
     name: 'Damian Lillard',
@@ -141,7 +141,7 @@ const players = [
     rating: 9.0,
     salary: 30000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/lillada01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/lillada01.jpg'
   },
   {
     name: 'Mario Hezonja',
@@ -150,7 +150,7 @@ const players = [
     rating: 4.7,
     salary: 6500000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/hezonma01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/hezonma01.jpg'
   },
   {
     name: 'Zion Williamson',
@@ -159,7 +159,7 @@ const players = [
     rating: 7.8,
     salary: 6500000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/willizi01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/willizi01.jpg'
   },
   {
     name: 'Brandon Ingram',
@@ -168,7 +168,7 @@ const players = [
     rating: 8,
     salary: 16000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/ingrabr01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/ingrabr01.jpg'
   },
   {
     name: 'Devin Booker',
@@ -177,7 +177,7 @@ const players = [
     rating: 8.7,
     salary: 20000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/bookede01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/bookede01.jpg'
   },
   {
     name: 'Deandre Ayton',
@@ -186,7 +186,7 @@ const players = [
     rating: 6.7,
     salary: 10000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/aytonde01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/aytonde01.jpg'
   },
   {
     name: 'Kevin Durant',
@@ -195,7 +195,7 @@ const players = [
     rating: 9.5,
     salary: 34000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/duranke01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/duranke01.jpg'
   },
   {
     name: 'Kyrie Irving',
@@ -204,7 +204,7 @@ const players = [
     rating: 9.1,
     salary: 33000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/irvinky01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/irvinky01.jpg'
   },
   {
     name: 'Kemba Walker',
@@ -213,7 +213,7 @@ const players = [
     rating: 9.2,
     salary: 33000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/walkeke02.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/walkeke02.jpg'
   },
   {
     name: 'Bismack Biyombo',
@@ -222,7 +222,7 @@ const players = [
     rating: 3.5,
     salary: 8000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/biyombi01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/biyombi01.jpg'
   },
   {
     name: 'Mo Bamba',
@@ -231,7 +231,7 @@ const players = [
     rating: 5.2,
     salary: 9000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/bambamo01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/bambamo01.jpg'
   },
   {
     name: 'Terrence Ross',
@@ -240,7 +240,7 @@ const players = [
     rating: 6.5,
     salary: 16000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/rosste01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/rosste01.jpg'
   },
   {
     name: 'DeMar DeRozan',
@@ -249,7 +249,7 @@ const players = [
     rating: 7.5,
     salary: 22000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/derozde01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/derozde01.jpg'
   },
   {
     name: 'Pascal Siakam',
@@ -258,7 +258,7 @@ const players = [
     rating: 8.8,
     salary: 24000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/siakapa01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/siakapa01.jpg'
   },
   {
     name: 'Fred VanVleet',
@@ -267,7 +267,7 @@ const players = [
     rating: 8.5,
     salary: 29000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/vanvlfr01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/vanvlfr01.jpg'
   },
   {
     name: 'Nikola Jokić',
@@ -276,7 +276,7 @@ const players = [
     rating: 9.0,
     salary: 32000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/jokicni01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/jokicni01.jpg'
   },
   {
     name: 'Jamal Crawford',
@@ -285,7 +285,7 @@ const players = [
     rating: 6.6,
     salary: 6000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/crawfja01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/crawfja01.jpg'
   },
   {
     name: 'Jeff Green',
@@ -294,7 +294,7 @@ const players = [
     rating: 5.9,
     salary: 16000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/greenje02.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/greenje02.jpg'
   },
   {
     name: 'Caris LeVert',
@@ -303,7 +303,7 @@ const players = [
     rating: 7.5,
     salary: 17000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/leverca01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/leverca01.jpg'
   },
   {
     name: 'RJ Barrett',
@@ -312,7 +312,7 @@ const players = [
     rating: 6.5,
     salary: 8000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/barrerj01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/barrerj01.jpg'
   },
   {
     name: 'JJ Reddick',
@@ -321,7 +321,7 @@ const players = [
     rating: 6.9,
     salary: 12000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/redicjj01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/redicjj01.jpg'
   },
   {
     name: 'Donovan Mitchell',
@@ -330,7 +330,7 @@ const players = [
     rating: 8.0,
     salary: 22000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/mitchdo01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/mitchdo01.jpg'
   },
   {
     name: 'Rudy Gobert',
@@ -339,7 +339,7 @@ const players = [
     rating: 7.6,
     salary: 23000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/goberru01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/goberru01.jpg'
   },
   {
     name: 'Luka Dončić',
@@ -348,16 +348,16 @@ const players = [
     rating: 9.1,
     salary: 27000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/doncilu01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/doncilu01.jpg'
   },
   {
     name: 'Jordan Clarkson',
-    number: 00,
+    number: 1,
     position: 'SG',
     rating: 6.8,
     salary: 17000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/clarkjo01.jpg',
+      'https://www.basketball-reference.com/req/202011191/images/players/clarkjo01.jpg'
   },
   {
     name: 'Kristaps Porziņģis',
@@ -366,9 +366,11 @@ const players = [
     rating: 8.2,
     salary: 28000000,
     url:
-      'https://www.basketball-reference.com/req/202011191/images/players/porzikr01.jpg',
-  },
+      'https://www.basketball-reference.com/req/202011191/images/players/porzikr01.jpg'
+  }
 ];
+
+module.exports = players;
 
 // TEMPLATE:
 // {

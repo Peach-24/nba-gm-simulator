@@ -5,18 +5,42 @@
   box-sizing: border-box;
 }
 
+main {
+  padding: 2rem;
+}
+
 /* BALL ANIMATION */
 #ball:hover {
   transition: 0.2s;
   transform: translate(0px, -8px);
 }
 
-/* CURRENT ROSTER */
-#currentRoster {
-  justify-content: left;
+.rosters-container {
+  display: flex;
+
+  margin: 1rem;
 }
 
-/* AVAILABLE PLAYERS */
-#availablePlayers {
-  text-align: right;
+.rosters {
+  width: 60%;
+
+  margin: 1rem;
+  padding: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+.rules-list {
+  list-style: circle;
+}
+
+#player-card {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgb(215, 210, 195);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.42);
+  text-align: center;
 }
