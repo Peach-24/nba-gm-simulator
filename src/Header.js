@@ -11,6 +11,7 @@ const Header = () => {
         width="100"
         alt="bouncing basketball"
       ></img>
+      <p id="ball-emoji">🏀</p>
       <form>
         <label>Enter your name: </label>
         <input
@@ -19,7 +20,7 @@ const Header = () => {
           placeholder="GM Joe Bloggs"
           required
         ></input>
-        <button> + </button>
+        <button> 🏀 </button>
         <br></br>
 
         <label>Enter your team name</label>

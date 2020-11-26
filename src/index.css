@@ -10,6 +10,16 @@ main {
   background-color: rgba(0, 0, 0, 0.452);
   z-index: 0;
 }
+
+#ball-emoji {
+  font-size: 100px;
+}
+
+#ball-emoji:hover {
+  transition: 0.2s;
+  transform: translate(0px, -8px);
+}
+
 #rules {
   margin: auto;
   width: 40%;
@@ -19,7 +29,7 @@ main {
 }
 header {
   text-align: center;
-  background-color: blanchedalmond;
+  background-color: white;
   width: 60%;
   margin: auto;
 }
