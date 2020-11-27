@@ -48,12 +48,11 @@ class App extends React.Component {
         <div>{this.RenderButtonAndSound()}</div>
 
         <Header />
-        <Budget />
+        <Budget roster={this.state.currentRoster} />
         <Scouting />
         <div class="rosters-container">
           <CurrentRoster
-            players={this.state.currentRoster}
-            // addToRoster={this.addToRoster}
+            roster={this.state.currentRoster}
             selectPlayer={this.selectPlayer}
           />
           <AvailablePlayers
@@ -84,21 +83,10 @@ class App extends React.Component {
       const newState = {
         currentRoster: [player, ...currState.currentRoster]
       };
+
       return newState;
     });
   };
-
-  // addToRoster = () => {
-  //   console.log('IN addToRoster >>>>>>>>>>');
-  //   this.setState((currState) => {
-  //     console.log(currState.currentRoster);
-  //     let x = this.selectedPlayer;
-  //     const newState = {
-  //       currentRoster: currState.currentRoster.push(x),
-  //     };
-  //     return newState;
-  //   });
-  // };
 }
 
 export default App;

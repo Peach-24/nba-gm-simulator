@@ -4,7 +4,7 @@
 // e.g. 34000000 ----> '$34,000,000'
 
 const salaryFormatter = (salary) => {
-  const threes = [3, 7, 10, 12];
+  const threes = [3, 7, 11, 15];
   let finalStr = '';
   if (salary < 1000) {
     const splits = salary.toString().split('');
