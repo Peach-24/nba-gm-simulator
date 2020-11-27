@@ -2,9 +2,9 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header id="welcome">
+    <header id='welcome'>
       <h1>NBA GM Simulator</h1>
-      <p id="ball-emoji">🏀</p>
+      <p id='ball-emoji'>🏀</p>
       {/* <img
         src="https://lh3.googleusercontent.com/proxy/TJLEr9yEe53LMecNfUobT4zuZfD0N4cyBvzmzxcSIwGsoMTua8q-YdaDnufvE__2VDL_HZ8gmm6TGJOHTnjJKp91RDoCWSc6LrkApRb0_6nUAc7x"
         alt="cat playing basketball"
@@ -15,9 +15,9 @@ const Header = () => {
       <form>
         <label>Enter your name: </label>
         <input
-          type="text"
-          size="25"
-          placeholder="GM Joe Bloggs"
+          type='text'
+          size='25'
+          placeholder='GM Joe Bloggs'
           required
         ></input>
         <button> + </button>
@@ -25,9 +25,9 @@ const Header = () => {
 
         <label>Enter team name: </label>
         <input
-          type="text"
-          size="25"
-          placeholder="The Monstars"
+          type='text'
+          size='25'
+          placeholder='The Monstars'
           required
         ></input>
         <button> + </button>
@@ -45,13 +45,13 @@ const Header = () => {
       </p>
       <br></br>
       <h2>Rules</h2>
-      <div id="rules">
+      <div id='rules'>
         <ul>
-          <li class="rules-list">You must have at least 8 players</li>
-          <li class="rules-list">
+          <li className='rules-list'>You must have at least 8 players</li>
+          <li className='rules-list'>
             You cannot go over your budget of $150,000,000
           </li>
-          <li class="rules-list">
+          <li className='rules-list'>
             Your team must contain Guards, Forwards and Centres
           </li>
         </ul>

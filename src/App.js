@@ -3,7 +3,6 @@ import './index.css';
 import Header from './Header';
 import CurrentRoster from './CurrentRoster';
 import AvailablePlayers from './AvailablePlayers';
-import Budget from './Budget';
 import Scouting from './Scouting';
 import players from './playerData';
 import Lebron from './sounds/lebron-james.mp3';
@@ -14,20 +13,19 @@ import { Howl, Howler } from 'howler';
 const audioClips = [
   { sound: Lebron, label: 'CLICK ME' },
   { sound: Sword, label: 'Sword' },
-  { sound: Steph, label: 'Steph' }
+  { sound: Steph, label: 'Steph' },
 ];
 
 class App extends React.Component {
   state = {
     availablePlayers: players,
     currentRoster: [],
-    selectedPlayer: null,
-    remainingBudget: 150000000
+    remainingBudget: 150000000,
   };
 
   SoundPlay = (src) => {
     const sound = new Howl({
-      src
+      src,
     });
     sound.play();
   };
@@ -49,13 +47,9 @@ class App extends React.Component {
         <div>{this.RenderButtonAndSound()}</div>
 
         <Header />
-        <Budget
-          roster={this.state.currentRoster}
-          updateCurrentSpend={this.updateCurrentSpend}
-          remainingBudget={this.state.remainingBudget}
-        />
+
         <Scouting />
-        <div class="rosters-container">
+        <div className='rosters-container'>
           <CurrentRoster
             roster={this.state.currentRoster}
             selectPlayer={this.selectPlayer}
@@ -66,6 +60,7 @@ class App extends React.Component {
             players={this.state.availablePlayers}
             selectPlayer={this.selectPlayer}
             addToRoster={this.addToRoster}
+            remainingBudget={this.state.remainingBudget}
           />
         </div>
       </main>
@@ -73,43 +68,26 @@ class App extends React.Component {
   }
 
   selectPlayer = (playerName) => {
-    if (true) {
-      this.setState((currState) => {
-        const remaining =
-          currState.remainingBudget -
-          this.updateCurrentSpend(currState.currentRoster);
-        console.log(remaining);
-        const newState = {
-          availablePlayers: currState.availablePlayers.filter(
-            (player) => player.name !== playerName
-          ),
-          selectedPlayer: (currState.selectedPlayer = playerName),
-          remainingBudget: remaining
-        };
+    this.setState((currState) => {
+      const newState = {
+        availablePlayers: currState.availablePlayers.filter(
+          (player) => player.name !== playerName
+        ),
+      };
 
-        return newState;
-      });
-    }
+      return newState;
+    });
   };
 
   addToRoster = (player) => {
-    if (true) {
-      this.setState((currState) => {
-        const newState = {
-          currentRoster: [player, ...currState.currentRoster]
-        };
+    this.setState((currState) => {
+      const newState = {
+        currentRoster: [player, ...currState.currentRoster],
+        remainingBudget: currState.remainingBudget - player.salary,
+      };
 
-        return newState;
-      });
-    }
-  };
-
-  updateCurrentSpend = (roster) => {
-    let total = 0;
-    for (const obj of roster) {
-      total = obj.salary;
-    }
-    return total;
+      return newState;
+    });
   };
 }
 
