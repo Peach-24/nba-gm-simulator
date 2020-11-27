@@ -11,14 +11,7 @@ const Header = () => {
         height="250"
         width="250"
       /> */}
-      <iframe
-        title="lebron"
-        width="110"
-        height="200"
-        src="https://www.myinstants.com/instant/lebron-james-kid/embed/"
-        frameborder="0"
-        scrolling="no"
-      ></iframe>
+
       <form>
         <label>Enter your name: </label>
         <input
