@@ -2,19 +2,11 @@ import React from 'react';
 import salaryFormatter from './func-sandbox';
 
 const CurrentRoster = (props) => {
-  const updateCurrentSpend = (roster) => {
-    let total = 0;
-    for (const obj of roster) {
-      total += obj.salary;
-    }
-    return total;
-  };
-
   return (
     <header id="currentRoster" class="rosters">
       <h3>Current Roster:</h3>
       <p>Number of players: {props.roster.length}</p>
-      <p>Spent so far: {salaryFormatter(updateCurrentSpend(props.roster))}</p>
+      <p>Spent so far: {salaryFormatter(150000000 - props.remainingBudget)}</p>
 
       <ul>
         {props.roster.map((player) => {

@@ -21,7 +21,8 @@ class App extends React.Component {
   state = {
     availablePlayers: players,
     currentRoster: [],
-    selectedPlayer: null
+    selectedPlayer: null,
+    remainingBudget: 150000000
   };
 
   SoundPlay = (src) => {
@@ -48,12 +49,18 @@ class App extends React.Component {
         <div>{this.RenderButtonAndSound()}</div>
 
         <Header />
-        <Budget roster={this.state.currentRoster} />
+        <Budget
+          roster={this.state.currentRoster}
+          updateCurrentSpend={this.updateCurrentSpend}
+          remainingBudget={this.state.remainingBudget}
+        />
         <Scouting />
         <div class="rosters-container">
           <CurrentRoster
             roster={this.state.currentRoster}
             selectPlayer={this.selectPlayer}
+            updateCurrentSpend={this.updateCurrentSpend}
+            remainingBudget={this.state.remainingBudget}
           />
           <AvailablePlayers
             players={this.state.availablePlayers}
@@ -66,26 +73,43 @@ class App extends React.Component {
   }
 
   selectPlayer = (playerName) => {
-    this.setState((currState) => {
-      const newState = {
-        availablePlayers: currState.availablePlayers.filter(
-          (player) => player.name !== playerName
-        ),
-        selectedPlayer: (currState.selectedPlayer = playerName)
-      };
+    if (true) {
+      this.setState((currState) => {
+        const remaining =
+          currState.remainingBudget -
+          this.updateCurrentSpend(currState.currentRoster);
+        console.log(remaining);
+        const newState = {
+          availablePlayers: currState.availablePlayers.filter(
+            (player) => player.name !== playerName
+          ),
+          selectedPlayer: (currState.selectedPlayer = playerName),
+          remainingBudget: remaining
+        };
 
-      return newState;
-    });
+        return newState;
+      });
+    }
   };
 
   addToRoster = (player) => {
-    this.setState((currState) => {
-      const newState = {
-        currentRoster: [player, ...currState.currentRoster]
-      };
+    if (true) {
+      this.setState((currState) => {
+        const newState = {
+          currentRoster: [player, ...currState.currentRoster]
+        };
 
-      return newState;
-    });
+        return newState;
+      });
+    }
+  };
+
+  updateCurrentSpend = (roster) => {
+    let total = 0;
+    for (const obj of roster) {
+      total = obj.salary;
+    }
+    return total;
   };
 }
 

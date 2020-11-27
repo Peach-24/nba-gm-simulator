@@ -45,6 +45,10 @@ button {
   padding: 0.25vw;
 }
 
+#budget-error {
+  color: red;
+}
+
 #select-player {
   padding: 1vw;
   font-size: 1vw;
