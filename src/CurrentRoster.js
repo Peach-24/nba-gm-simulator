@@ -30,6 +30,8 @@ const CurrentRoster = (props) => {
       </div>
       <ul>
         {props.roster.map((player) => {
+          const remove = props.selectRosterPlayer;
+
           return (
             <li key={player.name} id='player-card'>
               <div className='player-block'>
@@ -43,7 +45,20 @@ const CurrentRoster = (props) => {
                 </div>
                 <div className='rating'>
                   <p className='rating'>{player.rating}</p>
-                  <button>Remove</button>
+                  <div
+                    onClick={() => {
+                      props.addToAvailables(player);
+                    }}
+                  >
+                    <button
+                      onClick={() => {
+                        remove(player.name);
+                        console.log('remove from roster...');
+                      }}
+                    >
+                      Remove
+                    </button>
+                  </div>
                 </div>
               </div>
             </li>

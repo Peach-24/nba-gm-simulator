@@ -98,8 +98,10 @@ class App extends React.Component {
           <CurrentRoster
             roster={this.state.currentRoster}
             selectPlayer={this.selectPlayer}
+            selectRosterPlayer={this.selectRosterPlayer}
             updateCurrentSpend={this.updateCurrentSpend}
             remainingBudget={this.state.remainingBudget}
+            addToAvailables={this.addToAvailables}
           />
           <AvailablePlayers
             players={this.state.availablePlayers}
@@ -123,12 +125,35 @@ class App extends React.Component {
       return newState;
     });
   };
+  selectRosterPlayer = (playerName) => {
+    this.setState((currState) => {
+      const newState = {
+        currentRoster: currState.currentRoster.filter(
+          (player) => player.name !== playerName
+        ),
+      };
+
+      return newState;
+    });
+  };
 
   addToRoster = (player) => {
     this.setState((currState) => {
       const newState = {
         currentRoster: [player, ...currState.currentRoster],
         remainingBudget: currState.remainingBudget - player.salary,
+      };
+
+      return newState;
+    });
+  };
+
+  addToAvailables = (player) => {
+    console.log('Trying to add to availables >>>>>>', player);
+    this.setState((currState) => {
+      const newState = {
+        availablePlayers: [player, ...currState.availablePlayers],
+        remainingBudget: currState.remainingBudget + player.salary,
       };
 
       return newState;
