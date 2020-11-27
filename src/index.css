@@ -110,6 +110,11 @@ li {
 .rules-list {
   list-style: circle;
 }
+
+#GM-intro {
+  width: 50%;
+  margin: auto;
+}
 /***********   PLAYER CARDS   **********/
 
 #player-card {

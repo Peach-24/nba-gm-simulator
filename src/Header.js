@@ -34,13 +34,15 @@ const Header = () => {
       </form>
       <br></br>
 
-      <p>
+      <p id='GM-intro'>
         GM Joe Bloggs, you are now in charge of the The Monstars. You have
         $150,000,000 to spend on building out a roster for the upcoming season.
+        <br />
         <br />
         Good luck, we have faith in you.
         <br />
         Yours sincerely, <br />
+        <br />
         Team Owner
       </p>
       <br></br>

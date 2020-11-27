@@ -62,4 +62,3 @@ const AvailablePlayers = (props) => {
 };
 
 export default AvailablePlayers;
-// () => props.selectPlayer(player)
