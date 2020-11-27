@@ -11,18 +11,23 @@ const CurrentRoster = (props) => {
   };
   return (
     <header id='currentRoster' class='rosters'>
-      <h3>Current Roster:</h3>
-      <p>Number of players: {props.roster.length}</p>
-      <p>
-        Spent so far:
-        {salaryFormatter(updateCurrentSpend(props.roster))}
-      </p>
-      <p>
-        Budget remaining:
-        {salaryFormatter(150000000 - updateCurrentSpend(props.roster))}
-      </p>
-      <p id='budget-error'></p>
-
+      <div id='team-info-box'>
+        <h3>Current Roster:</h3>
+        <p>
+          Number of players: <strong>{props.roster.length}</strong>
+        </p>
+        <p>
+          Spent so far:{' '}
+          <strong>{salaryFormatter(updateCurrentSpend(props.roster))}</strong>
+        </p>
+        <p>
+          Budget remaining:{' '}
+          <strong>
+            {salaryFormatter(150000000 - updateCurrentSpend(props.roster))}
+          </strong>
+        </p>
+        <p id='budget-error'></p>
+      </div>
       <ul>
         {props.roster.map((player) => {
           return (
@@ -32,12 +37,12 @@ const CurrentRoster = (props) => {
                   <img src={player.url} alt={player.name} />
                 </div>
                 <div className='player-info'>
-                  <h1>{player.name}</h1>
+                  <h2>{player.name}</h2>
                   <p>Position: {player.position}</p>
                   <p>Salary: {salaryFormatter(player.salary)}</p>
                 </div>
                 <div className='rating'>
-                  <p>{player.rating}</p>
+                  <p className='rating'>{player.rating}</p>
                   <button>Remove</button>
                 </div>
               </div>

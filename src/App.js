@@ -40,6 +40,28 @@ class App extends React.Component {
     });
   };
 
+  handleClick = (event) => {
+    localStorage.setItem('state', JSON.stringify(this.state));
+  };
+
+  handleRestart = (event) => {
+    localStorage.clear();
+
+    this.setState((currState) => {
+      const newState = {
+        currentRoster: [],
+        remainingBudget: 150000000,
+        availablePlayers: players,
+      };
+      return newState;
+    });
+  };
+
+  componentDidMount() {
+    const savedState = JSON.parse(localStorage.getItem('state'));
+    this.setState(savedState);
+  }
+
   render() {
     Howler.volume(1.0);
     return (
@@ -48,7 +70,30 @@ class App extends React.Component {
 
         <Header />
 
-        <Scouting />
+        {/* <Scouting /> */}
+
+        <div id='main-buttons'>
+          <button id='save-progress' onClick={this.handleClick}>
+            SAVE PROGRESS
+          </button>
+          <button
+            id='submitTeam'
+            onClick={() => {
+              if (this.state.currentRoster.length >= 8) {
+                this.evaluateTeamScore(this.state.currentRoster);
+              } else {
+                alert(
+                  `Your roster only includes ${this.state.currentRoster.length} players!`
+                );
+              }
+            }}
+          >
+            SUBMIT ROSTER FOR APPROVAL
+          </button>
+          <button id='start-over' onClick={this.handleRestart}>
+            RESTART GAME
+          </button>
+        </div>
         <div className='rosters-container'>
           <CurrentRoster
             roster={this.state.currentRoster}
@@ -88,6 +133,22 @@ class App extends React.Component {
 
       return newState;
     });
+  };
+
+  evaluateTeamScore = (roster) => {
+    console.log(roster);
+    let totalScore = 0;
+
+    for (const player of roster) {
+      totalScore += player.rating;
+    }
+    let average = (totalScore / roster.length).toFixed(1);
+    console.log(average);
+
+    alert(
+      `The NBA Season begins... \n\nIt's a journey of ups and downs for The Monstars... \n\n\n YOUR SCORE: ${average} - Not bad!`
+    );
+    return average;
   };
 }
 

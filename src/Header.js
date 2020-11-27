@@ -44,7 +44,7 @@ const Header = () => {
         Team Owner
       </p>
       <br></br>
-      <h2>Rules</h2>
+      <h3>Rules</h3>
       <div id='rules'>
         <ul>
           <li className='rules-list'>You must have at least 8 players</li>

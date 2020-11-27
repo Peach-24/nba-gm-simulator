@@ -17,18 +17,22 @@ const AvailablePlayers = (props) => {
                   <img src={player.url} alt={player.name} />
                 </div>
                 <div className='player-info'>
-                  <h1>{player.name}</h1>
+                  <h2>{player.name}</h2>
                   <p>Position: {player.position}</p>
                   <p>Salary: {salaryFormatter(player.salary)}</p>
                 </div>
                 <div className='rating'>
-                  <p>{player.rating}</p>
+                  <p className='rating'>{player.rating}</p>
 
                   <div
                     id='clicker'
                     onClick={() => {
                       if (player.salary <= moneyLeft) {
                         remove(player.name);
+                      } else {
+                        alert(
+                          "The team owner is fuming! There's no way you can afford him as well!"
+                        );
                       }
                     }}
                   >
@@ -37,6 +41,10 @@ const AvailablePlayers = (props) => {
                       onClick={() => {
                         if (player.salary <= moneyLeft) {
                           props.addToRoster(player);
+                        } else {
+                          alert(
+                            "The team owner is fuming! There's no way you can afford him as well!"
+                          );
                         }
                       }}
                     >
