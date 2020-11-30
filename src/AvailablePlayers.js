@@ -19,6 +19,7 @@ const AvailablePlayers = (props) => {
                 <div className='player-info'>
                   <h2>{player.name}</h2>
                   <p>Position: {player.position}</p>
+                  <p>#{player.number}</p>
                   <p>Salary: {salaryFormatter(player.salary)}</p>
                 </div>
                 <div className='rating'>

@@ -3,7 +3,7 @@ import './index.css';
 import Header from './Header';
 import CurrentRoster from './CurrentRoster';
 import AvailablePlayers from './AvailablePlayers';
-import Scouting from './Scouting';
+// import Scouting from './Scouting';
 import players from './playerData';
 import Lebron from './sounds/lebron-james.mp3';
 import Sword from './sounds/sword.mp3';
@@ -67,11 +67,8 @@ class App extends React.Component {
     return (
       <main>
         <div>{this.RenderButtonAndSound()}</div>
-
         <Header />
-
         {/* <Scouting /> */}
-
         <div id='main-buttons'>
           <button id='save-progress' onClick={this.handleClick}>
             SAVE PROGRESS
@@ -121,10 +118,10 @@ class App extends React.Component {
           (player) => player.name !== playerName
         ),
       };
-
       return newState;
     });
   };
+
   selectRosterPlayer = (playerName) => {
     this.setState((currState) => {
       const newState = {
@@ -132,7 +129,6 @@ class App extends React.Component {
           (player) => player.name !== playerName
         ),
       };
-
       return newState;
     });
   };
@@ -143,7 +139,6 @@ class App extends React.Component {
         currentRoster: [player, ...currState.currentRoster],
         remainingBudget: currState.remainingBudget - player.salary,
       };
-
       return newState;
     });
   };
@@ -155,7 +150,6 @@ class App extends React.Component {
         availablePlayers: [player, ...currState.availablePlayers],
         remainingBudget: currState.remainingBudget + player.salary,
       };
-
       return newState;
     });
   };
@@ -163,13 +157,11 @@ class App extends React.Component {
   evaluateTeamScore = (roster) => {
     console.log(roster);
     let totalScore = 0;
-
     for (const player of roster) {
       totalScore += player.rating;
     }
     let average = (totalScore / roster.length).toFixed(1);
     console.log(average);
-
     alert(
       `The NBA Season begins... \n\nIt's a journey of ups and downs for The Monstars... \n\n\n YOUR SCORE: ${average} - Not bad!`
     );
