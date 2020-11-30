@@ -4,13 +4,15 @@ const Header = () => {
   return (
     <header id='welcome'>
       <h1>NBA GM Simulator</h1>
-      <p id='ball-emoji'>🏀</p>
-      {/* <img
-        src="https://lh3.googleusercontent.com/proxy/TJLEr9yEe53LMecNfUobT4zuZfD0N4cyBvzmzxcSIwGsoMTua8q-YdaDnufvE__2VDL_HZ8gmm6TGJOHTnjJKp91RDoCWSc6LrkApRb0_6nUAc7x"
-        alt="cat playing basketball"
-        height="250"
-        width="250"
-      /> */}
+      <div id='header-logos'>
+        <img
+          src='https://www.pngkey.com/png/full/968-9682817_nba-logo.png'
+          alt='NBA logo'
+          height='110px'
+          width='50px'
+        />
+        <p id='ball-emoji'>🏀</p>
+      </div>
 
       <form>
         <label>Enter your name: </label>
@@ -33,7 +35,6 @@ const Header = () => {
         <button> + </button>
       </form>
       <br></br>
-
       <p id='GM-intro'>
         GM Joe Bloggs, you are now in charge of the The Monstars. You have
         $150,000,000 to spend on building out a roster for the upcoming season.
