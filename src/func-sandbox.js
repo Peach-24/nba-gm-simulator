@@ -1,9 +1,4 @@
-// salary formatter
-// takes number as input
-// output is correctly formatted salary string.
-// e.g. 34000000 ----> '$34,000,000'
-
-const salaryFormatter = (salary) => {
+export const salaryFormatter = (salary) => {
   const threes = [3, 7, 11, 15];
   let finalStr = '';
   if (salary < 1000) {
@@ -25,4 +20,11 @@ const salaryFormatter = (salary) => {
   return finalStr;
 };
 
-export default salaryFormatter;
+export const positionFormatter = (arr) => {
+  let finalStr = '';
+  finalStr += arr[0].toString();
+  for (let i = 1; i < arr.length; i++) {
+    finalStr += `, ${arr[i]}`;
+  }
+  return finalStr;
+};

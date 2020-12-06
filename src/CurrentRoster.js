@@ -1,5 +1,5 @@
 import React from 'react';
-import salaryFormatter from './func-sandbox';
+import { salaryFormatter, positionFormatter } from './func-sandbox';
 
 const CurrentRoster = (props) => {
   const updateCurrentSpend = (roster) => {
@@ -40,7 +40,7 @@ const CurrentRoster = (props) => {
                 </div>
                 <div className='player-info'>
                   <h2>{player.name}</h2>
-                  <p>Position: {player.position}</p>
+                  <p>{positionFormatter(player.position)}</p>
                   <p>#{player.number}</p>
                   <p>Salary: {salaryFormatter(player.salary)}</p>
                 </div>

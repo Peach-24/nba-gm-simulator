@@ -1,5 +1,5 @@
 import React from 'react';
-import salaryFormatter from './func-sandbox';
+import { salaryFormatter, positionFormatter } from './func-sandbox';
 
 const AvailablePlayers = (props) => {
   return (
@@ -18,7 +18,7 @@ const AvailablePlayers = (props) => {
                 </div>
                 <div className='player-info'>
                   <h2>{player.name}</h2>
-                  <p>Position: {player.position}</p>
+                  <p>Position: {positionFormatter(player.position)}</p>
                   <p>#{player.number}</p>
                   <p>Salary: {salaryFormatter(player.salary)}</p>
                 </div>
