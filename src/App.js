@@ -3,41 +3,16 @@ import './index.css';
 import Header from './Header';
 import CurrentRoster from './CurrentRoster';
 import AvailablePlayers from './AvailablePlayers';
-// import Scouting from './Scouting';
 import players from './playerData';
-import Lebron from './sounds/lebron-james.mp3';
-import Sword from './sounds/sword.mp3';
-import Steph from './sounds/steph-curry.mp3';
-import { Howl, Howler } from 'howler';
-
-const audioClips = [
-  { sound: Lebron, label: 'CLICK ME' },
-  { sound: Sword, label: 'Sword' },
-  { sound: Steph, label: 'Steph' },
-];
 
 class App extends React.Component {
   state = {
     availablePlayers: players,
     currentRoster: [],
     remainingBudget: 150000000,
-  };
-
-  SoundPlay = (src) => {
-    const sound = new Howl({
-      src,
-    });
-    sound.play();
-  };
-
-  RenderButtonAndSound = () => {
-    return audioClips.map((soundObj, index) => {
-      return (
-        <button key={index} onClick={() => this.SoundPlay(soundObj.sound)}>
-          {soundObj.label}
-        </button>
-      );
-    });
+    guardCount: 0,
+    forwardCount: 0,
+    centreCount: 0,
   };
 
   handleClick = (event) => {
@@ -63,12 +38,9 @@ class App extends React.Component {
   }
 
   render() {
-    Howler.volume(1.0);
     return (
       <main>
-        <div>{this.RenderButtonAndSound()}</div>
         <Header />
-        {/* <Scouting /> */}
         <div id='main-buttons'>
           <button id='save-progress' onClick={this.handleClick}>
             SAVE PROGRESS
@@ -99,6 +71,9 @@ class App extends React.Component {
             updateCurrentSpend={this.updateCurrentSpend}
             remainingBudget={this.state.remainingBudget}
             addToAvailables={this.addToAvailables}
+            guardCount={this.state.guardCount}
+            forwardCount={this.state.forwardCount}
+            centreCount={this.state.centreCount}
           />
           <AvailablePlayers
             players={this.state.availablePlayers}
@@ -111,23 +86,52 @@ class App extends React.Component {
     );
   }
 
-  selectPlayer = (playerName) => {
-    this.setState((currState) => {
+  selectPlayer = async (selectedPlayer) => {
+    await this.setState((currState) => {
+      const primaryPosition = selectedPlayer.position[0];
+      let guardInc = 0;
+      let forwardInc = 0;
+      let centreInc = 0;
+      if (primaryPosition === 'PG' || primaryPosition === 'SG') {
+        guardInc += 1;
+      } else if (primaryPosition === 'SF' || primaryPosition === 'PF') {
+        forwardInc += 1;
+      } else if (primaryPosition === 'C') {
+        centreInc += 1;
+      }
       const newState = {
         availablePlayers: currState.availablePlayers.filter(
-          (player) => player.name !== playerName
+          (player) => player.name !== selectedPlayer.name
         ),
+        guardCount: currState.guardCount + guardInc,
+        forwardCount: currState.forwardCount + forwardInc,
+        centreCount: currState.centreCount + centreInc,
       };
       return newState;
     });
   };
 
-  selectRosterPlayer = (playerName) => {
-    this.setState((currState) => {
+  selectRosterPlayer = async (selectedPlayer) => {
+    await this.setState((currState) => {
+      const primaryPosition = selectedPlayer.position[0];
+      let numOfGuards = 0;
+      let numOfForwards = 0;
+      let numOfCentres = 0;
+      if (primaryPosition === 'PG' || primaryPosition === 'SG') {
+        numOfGuards -= 1;
+      } else if (primaryPosition === 'SF' || primaryPosition === 'PF') {
+        numOfForwards -= 1;
+      } else if (primaryPosition === 'C') {
+        numOfCentres -= 1;
+      }
+
       const newState = {
         currentRoster: currState.currentRoster.filter(
-          (player) => player.name !== playerName
+          (player) => player.name !== selectedPlayer.name
         ),
+        guardCount: currState.guardCount + numOfGuards,
+        forwardCount: currState.forwardCount + numOfForwards,
+        centreCount: currState.centreCount + numOfCentres,
       };
       return newState;
     });
@@ -144,7 +148,6 @@ class App extends React.Component {
   };
 
   addToAvailables = (player) => {
-    console.log('Trying to add to availables >>>>>>', player);
     this.setState((currState) => {
       const newState = {
         availablePlayers: [player, ...currState.availablePlayers],
@@ -155,13 +158,12 @@ class App extends React.Component {
   };
 
   evaluateTeamScore = (roster) => {
-    console.log(roster);
     let totalScore = 0;
     for (const player of roster) {
       totalScore += player.rating;
     }
     let average = (totalScore / roster.length).toFixed(1);
-    console.log(average);
+
     alert(
       `The NBA Season begins... \n\nIt's a journey of ups and downs for The Monstars... \n\n\n YOUR SCORE: ${average} - Not bad!`
     );

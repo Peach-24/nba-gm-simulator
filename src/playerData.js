@@ -2,7 +2,7 @@ const players = [
   {
     name: 'LeBron James',
     number: 23,
-    position: 'PF',
+    position: ['SF'],
     rating: 9.5,
     salary: 34000000,
     url:
@@ -11,7 +11,7 @@ const players = [
   {
     name: 'Giannis Antetokounmpo',
     number: 34,
-    position: 'PF',
+    position: ['PF'],
     rating: 9.3,
     salary: 32000000,
     url:
@@ -20,7 +20,7 @@ const players = [
   {
     name: 'James Harden',
     number: 13,
-    position: 'PG',
+    position: ['PG'],
     rating: 9.2,
     salary: 34000000,
     url:
@@ -29,7 +29,7 @@ const players = [
   {
     name: 'Stephen Curry',
     number: 30,
-    position: 'PG',
+    position: ['PG'],
     rating: 9.4,
     salary: 33000000,
     url:
@@ -38,7 +38,7 @@ const players = [
   {
     name: 'Jimmy Butler',
     number: 22,
-    position: 'SF',
+    position: ['SF'],
     rating: 8,
     salary: 28000000,
     url:
@@ -47,7 +47,7 @@ const players = [
   {
     name: 'Jayson Tatum',
     number: 0,
-    position: 'SF',
+    position: ['SF'],
     rating: 8.2,
     salary: 28000000,
     url:
@@ -56,7 +56,7 @@ const players = [
   {
     name: 'Chris Paul',
     number: 3,
-    position: 'PG',
+    position: ['PG'],
     rating: 8.9,
     salary: 28000000,
     url:
@@ -65,7 +65,7 @@ const players = [
   {
     name: 'Blake Griffin',
     number: 23,
-    position: 'PF',
+    position: ['PF'],
     rating: 8.0,
     salary: 26000000,
     url:
@@ -74,7 +74,7 @@ const players = [
   {
     name: 'Ben Simmons',
     number: 25,
-    position: 'PG',
+    position: ['PG'],
     rating: 8.2,
     salary: 28000000,
     url:
@@ -83,7 +83,7 @@ const players = [
   {
     name: 'Joel Embiid',
     number: 24,
-    position: 'C',
+    position: ['C'],
     rating: 7.8,
     salary: 25000000,
     url:
@@ -92,7 +92,7 @@ const players = [
   {
     name: 'Dwight Howard',
     number: 12,
-    position: 'C',
+    position: ['C'],
     rating: 6.8,
     salary: 2500000,
     url:
@@ -101,7 +101,7 @@ const players = [
   {
     name: 'Rajon Rondo',
     number: 14,
-    position: 'PG',
+    position: ['PG'],
     rating: 6.5,
     salary: 8000000,
     url:
@@ -110,7 +110,7 @@ const players = [
   {
     name: 'Dennis Schröder',
     number: 17,
-    position: 'PG',
+    position: ['PG'],
     rating: 6.9,
     salary: 12000000,
     url:
@@ -119,7 +119,7 @@ const players = [
   {
     name: 'Hassan Whiteside',
     number: 21,
-    position: 'C',
+    position: ['C'],
     rating: 5.0,
     salary: 7000000,
     url:
@@ -128,7 +128,7 @@ const players = [
   {
     name: 'CJ McCollum',
     number: 3,
-    position: 'SG',
+    position: ['SG'],
     rating: 8.2,
     salary: 21000000,
     url:
@@ -137,7 +137,7 @@ const players = [
   {
     name: 'Damian Lillard',
     number: 0,
-    position: 'PG',
+    position: ['PG'],
     rating: 9.0,
     salary: 30000000,
     url:
@@ -146,7 +146,7 @@ const players = [
   {
     name: 'Mario Hezonja',
     number: 44,
-    position: 'SF',
+    position: ['SF'],
     rating: 4.7,
     salary: 6500000,
     url:
@@ -155,7 +155,7 @@ const players = [
   {
     name: 'Zion Williamson',
     number: 1,
-    position: 'PF',
+    position: ['PF'],
     rating: 7.8,
     salary: 6500000,
     url:
@@ -164,7 +164,7 @@ const players = [
   {
     name: 'Brandon Ingram',
     number: 14,
-    position: 'SF',
+    position: ['SF'],
     rating: 8,
     salary: 16000000,
     url:
@@ -173,7 +173,7 @@ const players = [
   {
     name: 'Devin Booker',
     number: 1,
-    position: 'SG',
+    position: ['SG'],
     rating: 8.7,
     salary: 20000000,
     url:
@@ -182,7 +182,7 @@ const players = [
   {
     name: 'Deandre Ayton',
     number: 22,
-    position: 'C',
+    position: ['C'],
     rating: 6.7,
     salary: 10000000,
     url:
@@ -191,7 +191,7 @@ const players = [
   {
     name: 'Kevin Durant',
     number: 35,
-    position: 'SF',
+    position: ['SF'],
     rating: 9.5,
     salary: 34000000,
     url:
@@ -200,7 +200,7 @@ const players = [
   {
     name: 'Kyrie Irving',
     number: 11,
-    position: 'PG',
+    position: ['PG'],
     rating: 9.1,
     salary: 33000000,
     url:
@@ -209,7 +209,7 @@ const players = [
   {
     name: 'Kemba Walker',
     number: 8,
-    position: 'PG',
+    position: ['PG'],
     rating: 9.2,
     salary: 33000000,
     url:
@@ -218,7 +218,7 @@ const players = [
   {
     name: 'Bismack Biyombo',
     number: 11,
-    position: 'C',
+    position: ['C'],
     rating: 3.5,
     salary: 8000000,
     url:
@@ -227,7 +227,7 @@ const players = [
   {
     name: 'Mo Bamba',
     number: 5,
-    position: 'C',
+    position: ['C'],
     rating: 5.2,
     salary: 9000000,
     url:
@@ -236,7 +236,7 @@ const players = [
   {
     name: 'Terrence Ross',
     number: 8,
-    position: 'SG',
+    position: ['PG'],
     rating: 6.5,
     salary: 16000000,
     url:
@@ -245,7 +245,7 @@ const players = [
   {
     name: 'DeMar DeRozan',
     number: 10,
-    position: 'SF',
+    position: ['SG'],
     rating: 7.5,
     salary: 22000000,
     url:
@@ -254,7 +254,7 @@ const players = [
   {
     name: 'Pascal Siakam',
     number: 43,
-    position: 'PF',
+    position: ['PF'],
     rating: 8.8,
     salary: 24000000,
     url:
@@ -263,7 +263,7 @@ const players = [
   {
     name: 'Fred VanVleet',
     number: 23,
-    position: 'PG',
+    position: ['PG'],
     rating: 8.5,
     salary: 29000000,
     url:
@@ -272,7 +272,7 @@ const players = [
   {
     name: 'Nikola Jokić',
     number: 15,
-    position: 'C',
+    position: ['C'],
     rating: 9.0,
     salary: 32000000,
     url:
@@ -281,7 +281,7 @@ const players = [
   {
     name: 'Jamal Crawford',
     number: 1,
-    position: 'SG',
+    position: ['SG'],
     rating: 6.6,
     salary: 6000000,
     url:
@@ -290,7 +290,7 @@ const players = [
   {
     name: 'Jeff Green',
     number: 32,
-    position: 'PF',
+    position: ['PF'],
     rating: 5.9,
     salary: 16000000,
     url:
@@ -299,7 +299,7 @@ const players = [
   {
     name: 'Caris LeVert',
     number: 22,
-    position: 'SF',
+    position: ['SG'],
     rating: 7.5,
     salary: 17000000,
     url:
@@ -308,7 +308,7 @@ const players = [
   {
     name: 'RJ Barrett',
     number: 9,
-    position: 'SG',
+    position: ['SF'],
     rating: 6.5,
     salary: 8000000,
     url:
@@ -317,7 +317,7 @@ const players = [
   {
     name: 'JJ Reddick',
     number: 4,
-    position: 'SG',
+    position: ['SG'],
     rating: 6.9,
     salary: 12000000,
     url:
@@ -326,7 +326,7 @@ const players = [
   {
     name: 'Donovan Mitchell',
     number: 45,
-    position: 'SG',
+    position: ['SG'],
     rating: 8.0,
     salary: 22000000,
     url:
@@ -335,7 +335,7 @@ const players = [
   {
     name: 'Rudy Gobert',
     number: 27,
-    position: 'C',
+    position: ['C'],
     rating: 7.6,
     salary: 23000000,
     url:
@@ -344,7 +344,7 @@ const players = [
   {
     name: 'Luka Dončić',
     number: 77,
-    position: 'PG',
+    position: ['PG'],
     rating: 9.1,
     salary: 27000000,
     url:
@@ -353,7 +353,7 @@ const players = [
   {
     name: 'Jordan Clarkson',
     number: 1,
-    position: 'SG',
+    position: ['PG'],
     rating: 6.8,
     salary: 17000000,
     url:
@@ -362,7 +362,7 @@ const players = [
   {
     name: 'Kristaps Porziņģis',
     number: 6,
-    position: 'C',
+    position: ['PF'],
     rating: 8.2,
     salary: 28000000,
     url:
@@ -371,7 +371,7 @@ const players = [
   {
     name: 'Anthony Davis',
     number: 3,
-    position: 'C',
+    position: ['PF'],
     rating: 9.5,
     salary: 33000000,
     url:
@@ -380,7 +380,7 @@ const players = [
   {
     name: 'Tyler Herro',
     number: 14,
-    position: 'SG',
+    position: ['PF'],
     rating: 7.7,
     salary: 11000000,
     url:
@@ -389,7 +389,7 @@ const players = [
   {
     name: 'Carmelo Anthony',
     number: 7,
-    position: 'PF',
+    position: ['SF'],
     rating: 7.5,
     salary: 17000000,
     url:

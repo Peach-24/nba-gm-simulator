@@ -1,8 +1,4 @@
-// salary formatter
-// takes number as input
-// output is correctly formatted salary string.
-// e.g. 34000000 ----> '$34,000,000'
-import salaryFormatter from './func-sandbox';
+import { salaryFormatter, positionFormatter } from './func-sandbox';
 
 describe('salaryFormatter()', () => {
   it('returns a dollar string when passed 0', () => {
@@ -25,5 +21,14 @@ describe('salaryFormatter()', () => {
   });
   it('correctly formats 34000000', () => {
     expect(salaryFormatter(34000000)).toBe('$34,000,000');
+  });
+});
+
+describe('positionFormatter()', () => {
+  it('correctly formats an array of positions', () => {
+    expect(positionFormatter(['SG', 'SF'])).toBe('SG, SF');
+  });
+  it('correctly formats an array of a single position', () => {
+    expect(positionFormatter(['SG'])).toBe('SG');
   });
 });

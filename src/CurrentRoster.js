@@ -1,5 +1,5 @@
 import React from 'react';
-import salaryFormatter from './func-sandbox';
+import { salaryFormatter, positionFormatter } from './func-sandbox';
 
 const CurrentRoster = (props) => {
   const updateCurrentSpend = (roster) => {
@@ -10,7 +10,7 @@ const CurrentRoster = (props) => {
     return total;
   };
   return (
-    <header id='currentRoster' class='rosters'>
+    <header id='currentRoster' className='rosters'>
       <div id='team-info-box'>
         <h3>Current Roster:</h3>
         <p>
@@ -26,6 +26,10 @@ const CurrentRoster = (props) => {
             {salaryFormatter(150000000 - updateCurrentSpend(props.roster))}
           </strong>
         </p>
+        <hr></hr>
+        <p>Guards selected: {props.guardCount}</p>
+        <p>Forwards selected: {props.forwardCount}</p>
+        <p>Centres selected: {props.centreCount}</p>
         <p id='budget-error'></p>
       </div>
       <ul>
@@ -40,7 +44,7 @@ const CurrentRoster = (props) => {
                 </div>
                 <div className='player-info'>
                   <h2>{player.name}</h2>
-                  <p>Position: {player.position}</p>
+                  <p>{positionFormatter(player.position)}</p>
                   <p>#{player.number}</p>
                   <p>Salary: {salaryFormatter(player.salary)}</p>
                 </div>
@@ -53,8 +57,7 @@ const CurrentRoster = (props) => {
                   >
                     <button
                       onClick={() => {
-                        remove(player.name);
-                        console.log('remove from roster...');
+                        remove(player);
                       }}
                     >
                       Remove
