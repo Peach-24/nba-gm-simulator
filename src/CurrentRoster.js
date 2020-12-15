@@ -10,7 +10,7 @@ const CurrentRoster = (props) => {
     return total;
   };
   return (
-    <header id='currentRoster' class='rosters'>
+    <header id='currentRoster' className='rosters'>
       <div id='team-info-box'>
         <h3>Current Roster:</h3>
         <p>
