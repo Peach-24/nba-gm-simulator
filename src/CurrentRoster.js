@@ -26,6 +26,10 @@ const CurrentRoster = (props) => {
             {salaryFormatter(150000000 - updateCurrentSpend(props.roster))}
           </strong>
         </p>
+        <hr></hr>
+        <p>Guards selected: {props.guardCount}</p>
+        <p>Forwards selected: {props.forwardCount}</p>
+        <p>Centres selected: {props.centreCount}</p>
         <p id='budget-error'></p>
       </div>
       <ul>
@@ -53,8 +57,7 @@ const CurrentRoster = (props) => {
                   >
                     <button
                       onClick={() => {
-                        remove(player.name);
-                        console.log('remove from roster...');
+                        remove(player);
                       }}
                     >
                       Remove

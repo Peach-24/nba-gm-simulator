@@ -24,12 +24,11 @@ const AvailablePlayers = (props) => {
                 </div>
                 <div className='rating'>
                   <p className='rating'>{player.rating}</p>
-
                   <div
                     id='clicker'
                     onClick={() => {
                       if (player.salary <= moneyLeft) {
-                        remove(player.name);
+                        remove(player);
                       } else {
                         alert(
                           "The team owner is fuming! There's no way you can afford him as well!"
@@ -63,4 +62,3 @@ const AvailablePlayers = (props) => {
 };
 
 export default AvailablePlayers;
-// () => props.selectPlayer(player)

@@ -68,7 +68,7 @@ button {
 
 #main-buttons {
   display: flex;
-  max-width: 50%;
+  width: 50%;
   margin: auto;
 }
 #budget-error {
