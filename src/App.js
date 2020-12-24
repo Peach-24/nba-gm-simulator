@@ -31,6 +31,8 @@ class App extends React.Component {
         guardCount: 0,
         forwardCount: 0,
         centreCount: 0,
+        gmName: '',
+        teamName: '',
       };
       return newState;
     });
@@ -53,7 +55,12 @@ class App extends React.Component {
     } = this.state;
     return (
       <main>
-        <Header />
+        <Header
+          handleNameChange={this.handleNameChange}
+          handleTeamChange={this.handleTeamChange}
+          gmName={this.state.gmName}
+          teamName={this.state.teamName}
+        />
         <div id='main-buttons'>
           <button id='save-progress' onClick={this.handleClick}>
             SAVE PROGRESS
@@ -216,9 +223,21 @@ class App extends React.Component {
     let average = (totalScore / roster.length).toFixed(1);
 
     alert(
-      `The NBA Season begins... \n\nIt's a journey of ups and downs for The Monstars... \n\n\n YOUR SCORE: ${average} - Not bad!`
+      `\nAfter General Manager ${
+        this.state.gmName || 'Phil Jackson'
+      } has formed his roster, the ${
+        this.state.teamName || ' Los Angeles Lakers'
+      } embark on a new gruelling NBA season...\n\nThere are highs and lows, but the team soon start to click and get into a rhythm in time for the playoffs.\n\n\nYOUR SCORE: ${average} - Not bad!`
     );
     return average;
+  };
+
+  handleNameChange = (name) => {
+    this.setState({ gmName: name });
+  };
+
+  handleTeamChange = (name) => {
+    this.setState({ teamName: name });
   };
 }
 
