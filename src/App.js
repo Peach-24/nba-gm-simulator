@@ -14,6 +14,8 @@ class App extends React.Component {
     forwardCount: 0,
     centreCount: 0,
     posFilter: 'all',
+    gmName: null,
+    teamName: null,
   };
 
   handleClick = (event) => {
@@ -31,8 +33,8 @@ class App extends React.Component {
         guardCount: 0,
         forwardCount: 0,
         centreCount: 0,
-        gmName: '',
-        teamName: '',
+        gmName: null,
+        teamName: null,
       };
       return newState;
     });
