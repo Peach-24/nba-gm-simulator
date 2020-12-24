@@ -30,29 +30,21 @@ const AvailablePlayers = (props) => {
                 </div>
                 <div className='rating'>
                   <p className='rating'>{player.rating}</p>
-                  <div
-                    id='clicker'
+                  <button
+                    id='select-player'
                     onClick={() => {
                       if (player.salary <= moneyLeft) {
                         remove(player);
+                        props.addToRoster(player);
+                      } else {
+                        alert(
+                          "The team owner is fuming! There's no way you can afford him as well!"
+                        );
                       }
                     }}
                   >
-                    <button
-                      id='select-player'
-                      onClick={() => {
-                        if (player.salary <= moneyLeft) {
-                          props.addToRoster(player);
-                        } else {
-                          alert(
-                            "The team owner is fuming! There's no way you can afford him as well!"
-                          );
-                        }
-                      }}
-                    >
-                      Add
-                    </button>
-                  </div>
+                    Add
+                  </button>
                 </div>
               </div>
             </li>
