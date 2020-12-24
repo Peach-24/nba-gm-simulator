@@ -48,18 +48,11 @@ class Header extends Component {
             required
           ></input>
           <br></br>
-          {/* <button
-            onClick={(e) => {
-              this.handleSubmit(e);
-            }}
-          >
-            {' '}
-            Enter{' '}
-          </button> */}
         </form>
         <br></br>
         <p id='GM-intro'>
-          {this.state.gmName || 'Phil Jackson'}, you are now in charge of the
+          {this.state.gmName || 'Phil Jackson'}, you are now in charge of the{' '}
+          {` `}
           {this.state.teamName || ' Los Angeles Lakers'}. You have $150,000,000
           to spend on building out a roster for the upcoming season.
           <br />
@@ -68,7 +61,7 @@ class Header extends Component {
           <br />
           Yours sincerely, <br />
           <br />
-          Team Owner
+          Team Owner.
         </p>
         <br></br>
         <h3>Rules</h3>

@@ -29,10 +29,6 @@ const AvailablePlayers = (props) => {
                     onClick={() => {
                       if (player.salary <= moneyLeft) {
                         remove(player);
-                      } else {
-                        alert(
-                          "The team owner is fuming! There's no way you can afford him as well!"
-                        );
                       }
                     }}
                   >

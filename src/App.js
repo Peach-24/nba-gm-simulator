@@ -27,6 +27,9 @@ class App extends React.Component {
         currentRoster: [],
         remainingBudget: 150000000,
         availablePlayers: players,
+        guardCount: 0,
+        forwardCount: 0,
+        centreCount: 0,
       };
       return newState;
     });
@@ -38,6 +41,14 @@ class App extends React.Component {
   }
 
   render() {
+    const {
+      currentRoster,
+      remainingBudget,
+      availablePlayers,
+      guardCount,
+      forwardCount,
+      centreCount,
+    } = this.state;
     return (
       <main>
         <Header />
@@ -48,12 +59,24 @@ class App extends React.Component {
           <button
             id='submitTeam'
             onClick={() => {
-              if (this.state.currentRoster.length >= 8) {
-                this.evaluateTeamScore(this.state.currentRoster);
-              } else {
+              if (currentRoster.length < 8) {
                 alert(
-                  `Your roster only includes ${this.state.currentRoster.length} players!`
+                  `Your roster only includes ${currentRoster.length} players!`
                 );
+              } else if (
+                currentRoster.length >= 8 &&
+                (guardCount < 2 || forwardCount < 2 || centreCount < 1)
+              ) {
+                alert(
+                  `Your roster doesn't have enough players at each position.`
+                );
+              } else if (
+                currentRoster.length >= 8 &&
+                guardCount >= 2 &&
+                forwardCount >= 2 &&
+                centreCount >= 1
+              ) {
+                this.evaluateTeamScore(currentRoster);
               }
             }}
           >
@@ -65,7 +88,7 @@ class App extends React.Component {
         </div>
         <div className='rosters-container'>
           <CurrentRoster
-            roster={this.state.currentRoster}
+            roster={currentRoster}
             selectPlayer={this.selectPlayer}
             selectRosterPlayer={this.selectRosterPlayer}
             updateCurrentSpend={this.updateCurrentSpend}
@@ -73,13 +96,13 @@ class App extends React.Component {
             addToAvailables={this.addToAvailables}
             guardCount={this.state.guardCount}
             forwardCount={this.state.forwardCount}
-            centreCount={this.state.centreCount}
+            centreCount={centreCount}
           />
           <AvailablePlayers
-            players={this.state.availablePlayers}
+            players={availablePlayers}
             selectPlayer={this.selectPlayer}
             addToRoster={this.addToRoster}
-            remainingBudget={this.state.remainingBudget}
+            remainingBudget={remainingBudget}
           />
         </div>
       </main>
