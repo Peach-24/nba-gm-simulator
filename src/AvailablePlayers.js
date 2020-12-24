@@ -2,14 +2,20 @@ import React from 'react';
 import { salaryFormatter, positionFormatter } from './func-sandbox';
 
 const AvailablePlayers = (props) => {
+  const posFilter = props.posFilter;
+  const players = props.players;
+  const filteredPlayers = players.filter(
+    (x) => x.position.toString() === posFilter
+  );
+  const selection = posFilter === 'all' ? players : filteredPlayers;
+
   return (
     <div id='availablePlayers' className='rosters'>
       <h3>Available Players:</h3>
       <ul>
-        {props.players.map((player) => {
+        {selection.map((player) => {
           let moneyLeft = props.remainingBudget;
           const remove = props.selectPlayer;
-
           return (
             <li key={player.name} id='player-card'>
               <div className='player-block'>

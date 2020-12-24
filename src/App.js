@@ -13,6 +13,7 @@ class App extends React.Component {
     guardCount: 0,
     forwardCount: 0,
     centreCount: 0,
+    posFilter: 'all',
   };
 
   handleClick = (event) => {
@@ -48,6 +49,7 @@ class App extends React.Component {
       guardCount,
       forwardCount,
       centreCount,
+      posFilter,
     } = this.state;
     return (
       <main>
@@ -86,6 +88,24 @@ class App extends React.Component {
             RESTART GAME
           </button>
         </div>
+
+        <form id='scouting-form'>
+          <h3 id='scouting-title'>Scouting Report</h3>
+          <label htmlFor='positions'>Position: </label>
+          <select
+            id='positions'
+            name='positions'
+            onChange={this.handlePositionFilter}
+          >
+            <option value='all'>All positions</option>
+            <option value='PG'>Point Guard</option>
+            <option value='SG'>Shooting Guard</option>
+            <option value='SF'>Small Forward</option>
+            <option value='PF'>Power Forward</option>
+            <option value='C'>Centre</option>
+          </select>
+        </form>
+
         <div className='rosters-container'>
           <CurrentRoster
             roster={currentRoster}
@@ -100,6 +120,7 @@ class App extends React.Component {
           />
           <AvailablePlayers
             players={availablePlayers}
+            posFilter={posFilter}
             selectPlayer={this.selectPlayer}
             addToRoster={this.addToRoster}
             remainingBudget={remainingBudget}
@@ -108,6 +129,13 @@ class App extends React.Component {
       </main>
     );
   }
+
+  handlePositionFilter = async (e) => {
+    const pos = e.target.value.toString();
+    await this.setState({
+      posFilter: pos,
+    });
+  };
 
   selectPlayer = async (selectedPlayer) => {
     await this.setState((currState) => {

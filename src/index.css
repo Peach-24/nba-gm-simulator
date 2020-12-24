@@ -50,7 +50,7 @@ span {
   padding: 1rem;
   margin: auto;
   min-width: 30%;
-  max-width: 60%;
+  max-width: 40%;
 }
 
 #rules li {
@@ -119,6 +119,16 @@ li {
 #GM-intro {
   width: 50%;
   margin: auto;
+}
+
+#scouting-form {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 1rem;
+}
+#scouting-title {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 /***********   PLAYER CARDS   **********/
 

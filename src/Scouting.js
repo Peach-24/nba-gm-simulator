@@ -1,22 +1,28 @@
 import React from 'react';
 
 const Scouting = (props) => {
+  const handlePositionFilter = () => {};
   return (
     <form id='scouting-form'>
-      <label>Search/Filter</label>
-      <br></br>
+      <h4>Scouting Report</h4>
+
       <input type='text' placeholder='Search by name' />
       <button>Search</button>
       <br></br>
-      <input type='range' id='salary-range' min='0' max='34000000' />
+      {/* <input type='range' id='salary-range' min='0' max='34000000' />
       <label htmlFor='salary-range'>Salary</label>
       <br></br>
       <input type='range' id='rating-range' />
-      <label htmlFor='rating-range'>Rating</label>
+      <label htmlFor='rating-range'>Rating</label> */}
       <br></br>
 
-      <label htmlFor='positions'>Position</label>
-      <select id='positions' name='positions'>
+      <label htmlFor='positions'>Position: </label>
+      <select
+        id='positions'
+        name='positions'
+        onChange={this.handlePositionFilter}
+      >
+        <option value='point-guard'>All positions</option>
         <option value='point-guard'>Point Guard</option>
         <option value='shooting-guard'>Shooting Guard</option>
         <option value='small-forward'>Small Forward</option>
