@@ -68,8 +68,7 @@ button {
 
 #main-buttons {
   display: flex;
-  width: 50%;
-  margin: auto;
+  justify-content: center;
 }
 #budget-error {
   color: red;
