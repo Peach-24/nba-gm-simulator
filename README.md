@@ -1,4 +1,4 @@
-# NBA GM Team Selection Game
+# 🏀 NBA GM Team Selection Game 🏀
 
 _Hello and welcome to the NBA GM Team Selection Game._
 
@@ -14,27 +14,27 @@ ___Good luck!___
 
 ___
 ### Brief
-🏀    After learning the basics of React, we (Sam Aki & Josh Peachey) set out to create a fun, interactive, single-page application on a theme we both love, NBA Basketball.
+- After learning the basics of React, we (Sam Aki & Josh Peachey) set out to create a fun, interactive, single-page application on a theme we both love, NBA Basketball.
 
 ___
 ### Approach
-🏀    From the outset, we sought to create a game that can help anyone understand how the salary cap works in the NBA. 
+- From the outset, we sought to create a game that can help anyone understand how the salary cap works in the NBA. 
 
-🏀    We therefore knew that we would need specific data associated with each available player, and to keep a track of the running salary total for the user's team.
+- We therefore knew that we would need specific data associated with each available player, and to keep a track of the running salary total for the user's team.
 
 ___
 ### Visuals
-🏀    (Screenshots)
+- (Screenshots)
 
 ___
 ### Tech Used
-🏀    React 
+- React 
 
 ___
 ### Planned developments
 
-🏀    More detailed scoring system
+-  More detailed scoring system
 
-🏀    Multiple screens
+-  Multiple screens
 
-🏀    Incorperating live rosters on actual NBA teams
+-  Incorperating live rosters on actual NBA teams
