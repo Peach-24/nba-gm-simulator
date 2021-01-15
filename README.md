@@ -2,8 +2,6 @@
 
 _Hello and welcome to the NBA GM Team Selection Game._
 
-_We (Sam Aki & Josh Peachey) both love basketball and wanted to make a fun little game to test our newly acquired React skills._
-
 _You are the General Manager of an NBA team and have been tasked with filling out a roster with a set budget of $150,000,000._
 
 _Your team must:_
@@ -13,3 +11,22 @@ _2. Contain a mix of Guards, Forwards and Centres_
 _3. Not exceed the $150,000,000 salary cap._
 
 ___Good luck!___
+
+### Brief
+🏀 After learning the basics of React, we (Sam Aki & Josh Peachey) set out to create a fun, interactive, single-page application on a theme we both love, NBA Basketball.
+
+### Approach
+🏀 From the outset, we sought to create a game that can help anyone understand how the salary cap works in the NBA. 
+🏀 We therefore knew that we would need specific data associated with each available player, and to keep a track of the running salary total for the user's team.
+
+
+### Visuals
+🏀 (Screenshots)
+
+### Tech Used
+🏀 React 
+
+### Planned developments
+🏀 More detailed scoring system
+🏀 Multiple screens
+🏀 Incorperating live rosters on actual NBA teams
