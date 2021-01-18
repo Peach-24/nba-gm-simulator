@@ -29,11 +29,6 @@ ___
 - As the user is required to consider different information when making decisions, we designed the app to be a desktop game. 
 
 ___
-### Visuals
-
-- (Screenshots)
-
-___
 ### Tech Used
 - React 
 
