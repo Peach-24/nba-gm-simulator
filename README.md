@@ -12,6 +12,8 @@ _3. Not exceed the $150,000,000 salary cap._
 
 ___Good luck!___
 
+[Click here to play the game in your desktop browser](https://nba-gm-simulator.herokuapp.com/ )
+
 ___
 ### Brief
 
