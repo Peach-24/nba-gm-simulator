@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/nba-gm-simulator/static/css/main.6a6ee248.chunk.css",
+    "main.js": "/nba-gm-simulator/static/js/main.c4213a09.chunk.js",
+    "main.js.map": "/nba-gm-simulator/static/js/main.c4213a09.chunk.js.map",
+    "runtime-main.js": "/nba-gm-simulator/static/js/runtime-main.0d6e6ab6.js",
+    "runtime-main.js.map": "/nba-gm-simulator/static/js/runtime-main.0d6e6ab6.js.map",
+    "static/js/2.5ee152d8.chunk.js": "/nba-gm-simulator/static/js/2.5ee152d8.chunk.js",
+    "static/js/2.5ee152d8.chunk.js.map": "/nba-gm-simulator/static/js/2.5ee152d8.chunk.js.map",
+    "static/js/3.55c3121d.chunk.js": "/nba-gm-simulator/static/js/3.55c3121d.chunk.js",
+    "static/js/3.55c3121d.chunk.js.map": "/nba-gm-simulator/static/js/3.55c3121d.chunk.js.map",
+    "index.html": "/nba-gm-simulator/index.html",
+    "static/css/main.6a6ee248.chunk.css.map": "/nba-gm-simulator/static/css/main.6a6ee248.chunk.css.map",
+    "static/js/2.5ee152d8.chunk.js.LICENSE.txt": "/nba-gm-simulator/static/js/2.5ee152d8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d6e6ab6.js",
+    "static/js/2.5ee152d8.chunk.js",
+    "static/css/main.6a6ee248.chunk.css",
+    "static/js/main.c4213a09.chunk.js"
+  ]
+}
