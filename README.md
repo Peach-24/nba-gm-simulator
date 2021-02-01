@@ -1,6 +1,6 @@
 # 🏀 NBA GM Team Selection Game 🏀
 
-<!-- [Click here to play the game in your desktop browser](https://nba-gm-simulator.herokuapp.com/) -->
+[Click here to play the game in your desktop browser](https://peach-24.github.io/nba-gm-simulator/index.html)
 
 ---
 
