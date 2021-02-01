@@ -1,7 +1,7 @@
 {
   "name": "react-app",
   "version": "0.1.0",
-  "homepage": "http://peach-24.github.io/nba-gm-simulator",
+  "homepage": "https://peach-24.github.io/nba-gm-simulator",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
